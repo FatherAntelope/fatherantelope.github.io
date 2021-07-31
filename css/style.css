@@ -942,6 +942,10 @@ Modal Portfolio Styles
         order: -1;
         margin-bottom: 15px;
     }
+
+    .contact-info-item {
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 575px) {
