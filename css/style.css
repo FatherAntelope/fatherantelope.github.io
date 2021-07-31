@@ -813,6 +813,10 @@ Modal Portfolio Styles
     padding: 0 15px;
 }
 
+.contact-form h4 {
+    margin-bottom: 1rem;
+}
+
 .contact-form .input-group {
     width: 100%;
     margin-bottom: 20px;
