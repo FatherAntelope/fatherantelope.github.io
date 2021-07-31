@@ -947,7 +947,7 @@ Modal Portfolio Styles
 @media (max-width: 575px) {
     .section-title,
     .header .nav-inner ul li a{
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .text-home h1 {
