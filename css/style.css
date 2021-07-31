@@ -961,4 +961,8 @@ Modal Portfolio Styles
     .modal-header h3 {
         font-size: 20px;
     }
+
+    .header .nav-inner {
+        min-height: calc(100vh - 100px);
+    }
 }
