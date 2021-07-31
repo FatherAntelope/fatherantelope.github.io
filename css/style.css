@@ -947,7 +947,7 @@ Modal Portfolio Styles
 @media (max-width: 575px) {
     .section-title,
     .header .nav-inner ul li a{
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .text-home h1 {
@@ -960,9 +960,5 @@ Modal Portfolio Styles
 
     .modal-header h3 {
         font-size: 20px;
-    }
-
-    .header .nav-inner {
-        min-height: calc(100vh - 100px);
     }
 }
