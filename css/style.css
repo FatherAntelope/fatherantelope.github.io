@@ -912,6 +912,10 @@ Modal Portfolio Styles
     .card-item-portfolio {
         width: calc(50% - 30px);
     }
+
+    .modal-inner {
+        padding: 30px 30px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -928,10 +932,6 @@ Modal Portfolio Styles
 
     .card-item-portfolio {
         width: calc(100% - 30px);
-    }
-
-    .modal-inner {
-        padding: 30px 30px;
     }
 
     .contact-info {
