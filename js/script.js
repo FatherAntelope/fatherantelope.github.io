@@ -73,6 +73,8 @@ document.addEventListener("click", evt => {
 
 document.querySelector(".modal-close").addEventListener("click", toggleModal);
 
+
+
 /**--------------------Функции--------------------**/
 function hideSection() {
     document.querySelector("section.active").classList.toggle("fade-out");
@@ -98,3 +100,4 @@ function itemDetailsPortfolio(itemPortfolio) {
     document.querySelector(".modal-body").innerHTML =
         itemPortfolio.querySelector(".card-item-portfolio-details").innerHTML;
 }
+

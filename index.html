@@ -339,7 +339,12 @@
     </div>
 </div>
 <!--/Модальные окна (Popup)-->
-
+<script type="module">
+    let response = await fetch("/json/portfolio.json");
+    let portfolioJSON = await response.json();
+    console.log(portfolioJSON);
+</script>
 <script src="js/script.js"></script>
+
 </body>
 </html>
