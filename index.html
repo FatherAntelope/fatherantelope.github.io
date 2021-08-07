@@ -143,112 +143,8 @@
                     <h2>Портфолио</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="card-item-portfolio">
-                    <div class="card-item-portfolio-thumbnail">
-                        <img src="img/portfolio/1.svg" alt="saturn-mis project">
-                    </div>
-                    <h3>Сатурн. МИС</h3>
-                    <button class="btn btn-view-project">Подробнее</button>
-                    <div class="card-item-portfolio-details">
-                        <div class="description">
-                            <p>
-                                Данное web-приложение представляет из себя медицинскую информационную систему для
-                                пациентов, проходящих процесс реабилитации или отдыха в санатории, для медицинского
-                                персонала, контролирующей процесс реабилитации или отдыха пациентов в санатории и для
-                                администрации, занимающейся обслуживанием сопровождения процесса реабилитации. <br>
-                                Проект реализовывался в рамках выпускной квалификационной работы по направлению
-                                "Программная инженерия".
-                            </p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Год - <span>2021</span></li>
-                                <li>Роль - <span>Fullstack</span></li>
-                                <li>Использованные технологии - <span>JS, PHP, CSS, HTML, Bootstrap 4, jQuery&Ajax</span></li>
-                                <li>Репозиторий - <span><a href="https://github.com/FatherAntelope/saturn-mis" target="_blank">https://github.com/FatherAntelope/saturn-mis</a></span></li>
-                                <li>Сайт - <span><a href="https://saturn-mis.ru/" target="_blank">saturn-mis.ru</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-item-portfolio">
-                    <div class="card-item-portfolio-thumbnail">
-                        <img src="img/portfolio/2.svg" alt="saturn-mis project">
-                    </div>
-                    <h3>Landing portfolio page</h3>
-                    <button class="btn btn-view-project">Подробнее</button>
-                    <div class="card-item-portfolio-details">
-                        <div class="description">
-                            <p>
-                                Первая версия лендинга моего портфолио. Отражает набросок моих первоначальных идей для
-                                дополнения к резюме.
-                            </p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Год - <span>2020</span></li>
-                                <li>Роль - <span>Frontend</span></li>
-                                <li>Использованные технологии - <span>HTML, CSS</span></li>
-                                <li>Репозиторий - <span><a href="https://github.com/FatherAntelope/fatherantelopev1.github.io" target="_blank">https://github.com/FatherAntelope/fatherantelopev1.github.io</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-item-portfolio">
-                    <div class="card-item-portfolio-thumbnail">
-                        <img src="img/portfolio/3.svg" alt="saturn-mis project">
-                    </div>
-                    <h3>HeartBlaze</h3>
-                    <button class="btn btn-view-project">Подробнее</button>
-                    <div class="card-item-portfolio-details">
-                        <div class="description">
-                            <p>
-                                Web-приложение для кафедры физической культуры ФГБОУ ВО "Уфимского Государственного
-                                Авиационного Технического Университета". Направлено на студентов и преподавателей
-                                данной кафедры с целью контроля физической активности во время занятий. <br>
-                                Проект временно использовался мною и другими студентами из моей спортивной секции.
-                            </p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Год - <span>2020</span></li>
-                                <li>Роль - <span>Fullstack</span></li>
-                                <li>Использованные технологии - <span>JS, PHP, CSS, HTML, MySQL, Semantic UI, jQuery&Ajax</span></li>
-                                <li>Репозиторий - <span><a href="https://github.com/FatherAntelope/heartblazeV2" target="_blank">https://github.com/FatherAntelope/heartblazeV2</a></span></li>
-                                <li>Сайт - <span><a href="http://heartblaze.online/" target="_blank">heartblaze.online</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-item-portfolio">
-                    <div class="card-item-portfolio-thumbnail">
-                        <img src="img/portfolio/4.svg" alt="saturn-mis project">
-                    </div>
-                    <h3>Прямая и плоскость</h3>
-                    <button class="btn btn-view-project">Подробнее</button>
-                    <div class="card-item-portfolio-details">
-                        <div class="description">
-                            <p>
-                                Десктопное программное обеспечение, отражающее взаимодействие прямой с плоскостью, а то
-                                есть их пересечение. Для расчетов были использованы основы тригонометрии, геометрии
-                                и дискретной математики.
-                            </p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Год - <span>2019</span></li>
-                                <li>Роль - <span>C# Dev</span></li>
-                                <li>Использованные технологии - <span>C#, Windows Forms</span></li>
-                                <li>Репозиторий - <span><a href="https://github.com/FatherAntelope/Straight-Flat-Intersection" target="_blank">https://github.com/FatherAntelope/Straight-Flat-Intersection</a></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="row cards-portfolio">
+                <!--Карточки проектов-->
             </div>
         </div>
     </section>
@@ -339,11 +235,6 @@
     </div>
 </div>
 <!--/Модальные окна (Popup)-->
-<script type="module">
-    let response = await fetch("/json/portfolio.json");
-    let portfolioJSON = await response.json();
-    console.log(portfolioJSON);
-</script>
 <script src="js/script.js"></script>
 
 </body>

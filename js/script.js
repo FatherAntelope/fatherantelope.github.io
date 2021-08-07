@@ -1,12 +1,69 @@
 'use strict';
+
+
+
 /**--------------------Спиннер--------------------**/
 window.addEventListener("load", () => {
-   document.querySelector(".main").classList.remove("hidden");
-   document.querySelector(".section-home").classList.add("active");
-   document.querySelector(".page-loader").classList.add("fade-out");
-   setTimeout(() => {
-       document.querySelector(".page-loader").style.display = "none";
-   }, 1000);
+    document.querySelector(".main").classList.remove("hidden");
+    document.querySelector(".section-home").classList.add("active");
+    document.querySelector(".page-loader").classList.add("fade-out");
+
+    // Загрузка данных проектов в карточки портфолио из JSON
+    fetch("/json/portfolio.json")
+        .then(response => response.json())
+        .then(portfolioJSON => {
+            let portfolioArr = Object.values(portfolioJSON.data);
+
+            portfolioArr.forEach(item => {
+                let cardPortfolioElement = document.getElementsByClassName("cards-portfolio")[0];
+
+                let htmlElement = `
+                <div class="card-item-portfolio">
+                    <div class="card-item-portfolio-thumbnail">
+                        <img src="${item.imgURL}" alt="saturn-mis project">
+                    </div>
+                    <h3>${item.nameProject}</h3>
+                    <button class="btn btn-view-project">Подробнее</button>
+                    <div class="card-item-portfolio-details">
+                        <div class="description">
+                            <p>${item.about}</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Год - <span>${item.year}</span></li>
+                                <li>Роль - <span>${item.role}</span></li>
+                                <li>Использованные технологии - <span>${item.technologies}</span></li>
+                                <li>Репозиторий - 
+                                    <span>
+                                        <a href="${item.repositoryURL}" target="_blank">${item.repositoryURL}</a>
+                                    </span>
+                                </li>
+                                ` +
+                                    (
+                                        item.websiteURL != null ?
+                                        `<li>Сайт - 
+                                                <span>
+                                                    <a href=\"${item.websiteURL}\" target=\"_blank\">
+                                                        ${item.websiteURL}
+                                                    </a>
+                                                </span>
+                                         </li>` :
+                                         ""
+                                    )
+                                + `
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                `;
+
+                cardPortfolioElement.insertAdjacentHTML("beforeend", htmlElement);
+            });
+        });
+
+    setTimeout(() => {
+        document.querySelector(".page-loader").style.display = "none";
+    }, 1000);
 });
 
 /**---------------------Навбар--------------------**/

@@ -2,12 +2,43 @@
   "data" : {
     "0" : {
       "nameProject": "Сатунр. МИС",
+      "imgURL": "img/portfolio/1.svg",
       "about": "Данное web-приложение представляет из себя медицинскую информационную систему для пациентов, проходящих процесс реабилитации или отдыха в санатории, для медицинского персонала, контролирующей процесс реабилитации или отдыха пациентов в санатории и для администрации, занимающейся обслуживанием сопровождения процесса реабилитации.\nПроект реализовывался в рамках выпускной квалификационной работы по направлению \"Программная инженерия\".",
-      "year": 2001,
+      "year": 2021,
       "role": "Fullstack",
       "technologies": "JS, PHP, CSS, HTML, Bootstrap 4, jQuery&Ajax",
       "repositoryURL": "https://github.com/fatherantelope/saturn-mis",
       "websiteURL": "saturn-mis.ru"
+    },
+    "1" : {
+      "nameProject": "Landing portfolio page",
+      "imgURL" : "img/portfolio/2.svg",
+      "about": "Первая версия лендинга моего портфолио. Отражает набросок моих первоначальных идей для дополнения к резюме.",
+      "year": 2020,
+      "role": "Frontend",
+      "technologies": "HTML, CSS",
+      "repositoryURL": "https://github.com/fatherantelope/fatherantelopev1.github.io",
+      "websiteURL": null
+    },
+    "2" : {
+      "nameProject": "HeartBlaze",
+      "imgURL" : "img/portfolio/3.svg",
+      "about": "Web-приложение для кафедры физической культуры ФГБОУ ВО \"Уфимского Государственного Авиационного Технического Университета\". Направлено на студентов и преподавателей данной кафедры с целью контроля физической активности во время занятий.\nПроект временно использовался мною и другими студентами из моей спортивной секции.",
+      "year": 2020,
+      "role": "Fullstack",
+      "technologies": "JS, PHP, CSS, HTML, MySQL, Semantic UI, jQuery&Ajax",
+      "repositoryURL": "https://github.com/fatherantelope/heartblazev2",
+      "websiteURL": "http://heartblaze.online/"
+    },
+    "3" : {
+      "nameProject": "Прямая и плоскость",
+      "imgURL" : "img/portfolio/4.svg",
+      "about": "Десктопное программное обеспечение, отражающее взаимодействие прямой с плоскостью, а то есть их пересечение. Для расчетов были использованы основы тригонометрии, геометрии и дискретной математики.",
+      "year": 2019,
+      "role": "C# Dev",
+      "technologies": "C#, Windows Forms",
+      "repositoryURL": "https://github.com/fatherantelope/straight-flat-intersection",
+      "websiteURL": null
     }
   }
 }
