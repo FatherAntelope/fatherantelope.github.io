@@ -122,7 +122,7 @@
                     <div class="tab-content" id="experience">
                         <div class="timeline">
                             <div class="timeline-item">
-                                <h4>*Личный и в годы учебы в университете*</h4>
+                                <h4>*Отсутствует - в последние годы проходил обучение без возможности работать*</h4>
                             </div>
                         </div>
                     </div>
@@ -159,26 +159,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="contact-form">
+                <div class="contact-form" >
                     <h4>Для деловых запросов и сотрудничества, пожалуйста, свяжитесь со мной, заполнив форму ниже.</h4>
-                    <form>
+                    <form id="formSendMsgToMail" action="https://formspree.io/f/mwkardvw" method="POST">
                         <div class="row">
                             <div class="input-group">
-                                <input type="text" placeholder="Имя" class="input-control" required>
+                                <input type="text" name="name" placeholder="Имя" class="input-control" required>
                             </div>
                             <div class="input-group">
-                                <input type="text" placeholder="Почта" class="input-control" required>
+                                <input type="email" name="email" placeholder="Почта" class="input-control" required>
                             </div>
                             <div class="input-group">
-                                <input type="text" placeholder="Тема" class="input-control" required>
-                            </div>
-                            <div class="input-group">
-                                <textarea placeholder="Сообщение..." class="input-control" required></textarea>
+                                <textarea name="message" placeholder="Сообщение..." class="input-control" required></textarea>
                             </div>
                         </div>
                         <div class="btn-submit">
                             <button type="submit" class="btn">Отправить</button>
                         </div>
+                        <p id="form-status" style="margin-top: 1rem; color: green"></p>
                     </form>
                 </div>
                 <div class="contact-info">
@@ -236,6 +234,8 @@
 </div>
 <!--/Модальные окна (Popup)-->
 <script src="js/script.js"></script>
+<script>
 
+</script>
 </body>
 </html>

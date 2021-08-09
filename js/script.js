@@ -8,58 +8,7 @@ window.addEventListener("load", () => {
     document.querySelector(".section-home").classList.add("active");
     document.querySelector(".page-loader").classList.add("fade-out");
 
-    // Загрузка данных проектов в карточки портфолио из JSON
-    fetch("/json/portfolio.json")
-        .then(response => response.json())
-        .then(portfolioJSON => {
-            let portfolioArr = Object.values(portfolioJSON.data);
-
-            portfolioArr.forEach(item => {
-                let cardPortfolioElement = document.getElementsByClassName("cards-portfolio")[0];
-
-                let htmlElement = `
-                <div class="card-item-portfolio">
-                    <div class="card-item-portfolio-thumbnail">
-                        <img src="${item.imgURL}" alt="saturn-mis project">
-                    </div>
-                    <h3>${item.nameProject}</h3>
-                    <button class="btn btn-view-project">Подробнее</button>
-                    <div class="card-item-portfolio-details">
-                        <div class="description">
-                            <p>${item.about}</p>
-                        </div>
-                        <div class="general-info">
-                            <ul>
-                                <li>Год - <span>${item.year}</span></li>
-                                <li>Роль - <span>${item.role}</span></li>
-                                <li>Использованные технологии - <span>${item.technologies}</span></li>
-                                <li>Репозиторий - 
-                                    <span>
-                                        <a href="${item.repositoryURL}" target="_blank">${item.repositoryURL}</a>
-                                    </span>
-                                </li>
-                                ` +
-                                    (
-                                        item.websiteURL != null ?
-                                        `<li>Сайт - 
-                                                <span>
-                                                    <a href=\"${item.websiteURL}\" target=\"_blank\">
-                                                        ${item.websiteURL}
-                                                    </a>
-                                                </span>
-                                         </li>` :
-                                         ""
-                                    )
-                                + `
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                `;
-
-                cardPortfolioElement.insertAdjacentHTML("beforeend", htmlElement);
-            });
-        });
+    drawPortfolioProjectCards("/json/portfolio.json");
 
     setTimeout(() => {
         document.querySelector(".page-loader").style.display = "none";
@@ -131,6 +80,29 @@ document.addEventListener("click", evt => {
 document.querySelector(".modal-close").addEventListener("click", toggleModal);
 
 
+/**-----------------Отправка формы (сообщение на почту)-----------------**/
+let formSentMsgToMail = document.getElementById("formSendMsgToMail");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    let status = document.getElementById("form-status");
+    let data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: formSentMsgToMail.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        status.innerHTML = "Ваше сообщение отправлено успешно!";
+        formSentMsgToMail.reset()
+    }).catch(error => {
+        status.innerHTML = "Ошибка. Сообщение не было отправлено"
+    });
+}
+
+formSentMsgToMail.addEventListener("submit", handleSubmit);
+
 
 /**--------------------Функции--------------------**/
 function hideSection() {
@@ -158,3 +130,57 @@ function itemDetailsPortfolio(itemPortfolio) {
         itemPortfolio.querySelector(".card-item-portfolio-details").innerHTML;
 }
 
+function drawPortfolioProjectCards(pathJSON) {
+    // Загрузка данных проектов в карточки портфолио из JSON
+    fetch(pathJSON)
+        .then(response => response.json())
+        .then(portfolioJSON => {
+            let portfolioArr = Object.values(portfolioJSON.data);
+
+            portfolioArr.forEach(item => {
+                let cardPortfolioElement = document.querySelector(".cards-portfolio");
+
+                let htmlElement = `
+                <div class="card-item-portfolio">
+                    <div class="card-item-portfolio-thumbnail">
+                        <img src="${item.imgURL}" alt="saturn-mis project">
+                    </div>
+                    <h3>${item.nameProject}</h3>
+                    <button class="btn btn-view-project">Подробнее</button>
+                    <div class="card-item-portfolio-details">
+                        <div class="description">
+                            <p>${item.about}</p>
+                        </div>
+                        <div class="general-info">
+                            <ul>
+                                <li>Год - <span>${item.year}</span></li>
+                                <li>Роль - <span>${item.role}</span></li>
+                                <li>Использованные технологии - <span>${item.technologies}</span></li>
+                                <li>Репозиторий - 
+                                    <span>
+                                        <a href="${item.repositoryURL}" target="_blank">${item.repositoryURL}</a>
+                                    </span>
+                                </li>
+                                ` +
+                    (
+                        item.websiteURL != null ?
+                            `<li>Сайт - 
+                                                <span>
+                                                    <a href=\"${item.websiteURL}\" target=\"_blank\">
+                                                        ${item.websiteURL}
+                                                    </a>
+                                                </span>
+                                         </li>` :
+                            ""
+                    )
+                    + `
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                `;
+
+                cardPortfolioElement.insertAdjacentHTML("beforeend", htmlElement);
+            });
+        });
+}
