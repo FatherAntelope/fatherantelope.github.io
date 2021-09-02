@@ -1,14 +1,12 @@
 'use strict';
 
-
-
 /**--------------------Спиннер--------------------**/
 window.addEventListener("load", () => {
     document.querySelector(".main").classList.remove("hidden");
     document.querySelector(".section-home").classList.add("active");
     document.querySelector(".page-loader").classList.add("fade-out");
 
-    drawPortfolioProjectCards("/json/portfolio.json");
+    renderInfo("/json/info.json");
 
     setTimeout(() => {
         document.querySelector(".page-loader").style.display = "none";
@@ -25,10 +23,10 @@ navToggler.addEventListener('click', () => {
 
 /**----------------Активация секций---------------**/
 document.addEventListener("click", evt => {
-    if(evt.target.classList.contains("link-item") && evt.target.hash !== "") {
+    if (evt.target.classList.contains("link-item") && evt.target.hash !== "") {
         document.querySelector(".overlay").classList.add("active");
         navToggler.classList.add("hide");
-        if(evt.target.classList.contains("nav-item")) {
+        if (evt.target.classList.contains("nav-item")) {
             toggleNavbar();
         } else {
             hideSection();
@@ -51,7 +49,7 @@ let tabsContainer = document.querySelector(".tabs-about"),
     aboutSection = document.querySelector(".section-about");
 
 tabsContainer.addEventListener("click", evtTab => {
-    if(evtTab.target.classList.contains("tab-item") && !evtTab.target.classList.contains("active")) {
+    if (evtTab.target.classList.contains("tab-item") && !evtTab.target.classList.contains("active")) {
         tabsContainer.querySelector(".active").classList.remove("active");
         evtTab.target.classList.add("active");
 
@@ -63,18 +61,18 @@ tabsContainer.addEventListener("click", evtTab => {
 
 /**-----------------Модальное окно-----------------**/
 document.addEventListener("click", evt => {
-    if(evt.target.classList.contains("btn-view-project")) {
+    if (evt.target.classList.contains("btn-view-project")) {
         itemDetailsPortfolio(evt.target.parentElement);
         toggleModal();
     }
 });
 
 document.addEventListener("click", evt => {
-   if(evt.target.classList.contains("modal-inner")) {
-       document.querySelector(".modal-portfolio").scrollTo(0, 0);
-       toggleModal();
-       itemDetailsPortfolio(evt.target.parentElement);
-   }
+    if (evt.target.classList.contains("modal-inner")) {
+        document.querySelector(".modal-portfolio").scrollTo(0, 0);
+        toggleModal();
+        itemDetailsPortfolio(evt.target.parentElement);
+    }
 });
 
 document.querySelector(".modal-close").addEventListener("click", toggleModal);
@@ -130,57 +128,102 @@ function itemDetailsPortfolio(itemPortfolio) {
         itemPortfolio.querySelector(".card-item-portfolio-details").innerHTML;
 }
 
-function drawPortfolioProjectCards(pathJSON) {
+function renderInfo(pathJSON) {
     // Загрузка данных проектов в карточки портфолио из JSON
     fetch(pathJSON)
         .then(response => response.json())
-        .then(portfolioJSON => {
-            let portfolioArr = Object.values(portfolioJSON.data);
+        .then(data => {
+            renderDescription(data["description"]);
+            renderSkills(data["skills"]["key"], "skills_key");
+            renderSkills(data["skills"]["additional"], "skills_additional");
+            renderEducation(data["education"]);
+            renderPortfolioCards(data["portfolio"]);
+            renderContacts(data["contacts"]);
+        });
+}
 
-            portfolioArr.forEach(item => {
-                let cardPortfolioElement = document.querySelector(".cards-portfolio");
+function renderDescription(dataJson) {
+    document.querySelector(".text-about").insertAdjacentHTML("afterbegin", dataJson);
+}
 
-                let htmlElement = `
+function renderSkills(dataJson, elemID) {
+    let skillsArr = Object.values(dataJson);
+    let skillsItem = document.getElementById(elemID);
+    let htmlElement;
+    skillsArr.forEach(item => {
+        htmlElement = `
+            <div class="skill-item">${item}</div>
+        `;
+        skillsItem.insertAdjacentHTML("beforeend", htmlElement);
+    });
+}
+
+function renderEducation(dataJson) {
+    let educationArr = Object.values(dataJson);
+    let timeline = document.querySelector(".timeline");
+    let htmlElement;
+    educationArr.forEach(item => {
+        htmlElement = `
+        <div class="timeline-item">
+            <span class="date">${item["period"]}</span>
+            <h4>${item["direction"]} - <span>${item["name_place_study"]}</span></h4>
+            <p>${item["document"]}</p>
+        </div>
+        `;
+        timeline.insertAdjacentHTML("beforeend", htmlElement);
+    });
+}
+
+function renderPortfolioCards(dataJson) {
+    let portfolioArr = Object.values(dataJson);
+    let cardPortfolioElement = document.querySelector(".cards-portfolio");
+    let htmlElement;
+    portfolioArr.forEach(item => {
+        htmlElement = `
                 <div class="card-item-portfolio">
                     <div class="card-item-portfolio-thumbnail">
-                        <img src="${item.imgURL}" alt="saturn-mis project">
+                        <img src="${item["imgURL"]}" alt="saturn-mis project">
                     </div>
-                    <h3>${item.nameProject}</h3>
+                    <h3>${item["nameProject"]}</h3>
                     <button class="btn btn-view-project">Подробнее</button>
                     <div class="card-item-portfolio-details">
                         <div class="description">
-                            <p>${item.about}</p>
+                            <p>${item["about"]}</p>
                         </div>
                         <div class="general-info">
                             <ul>
-                                <li>Год - <span>${item.year}</span></li>
-                                <li>Роль - <span>${item.role}</span></li>
-                                <li>Использованные технологии - <span>${item.technologies}</span></li>
+                                <li>Год - <span>${item["year"]}</span></li>
+                                <li>Роль - <span>${item["role"]}</span></li>
+                                <li>Использованные технологии - <span>${item["technologies"]}</span></li>
                                 <li>Репозиторий - 
                                     <span>
-                                        <a href="${item.repositoryURL}" target="_blank">${item.repositoryURL}</a>
+                                        <a href="${item["repositoryURL"]}" target="_blank">${item["repositoryURL"]}</a>
                                     </span>
                                 </li>
                                 ` +
-                    (
-                        item.websiteURL != null ?
-                            `<li>Сайт - 
+                                    (
+                                        item["websiteURL"] != null ?
+                                            `<li>Сайт - 
                                                 <span>
-                                                    <a href=\"${item.websiteURL}\" target=\"_blank\">
-                                                        ${item.websiteURL}
+                                                    <a href=\"${item["websiteURL"]}\" target=\"_blank\">
+                                                       ${item["websiteURL"]}
                                                     </a>
                                                 </span>
-                                         </li>` :
-                            ""
-                    )
-                    + `
+                                            </li>` :
+                                            ""
+                                    )
+                                    + `
                             </ul>
                         </div>
                     </div>
                 </div>
                 `;
 
-                cardPortfolioElement.insertAdjacentHTML("beforeend", htmlElement);
-            });
-        });
+        cardPortfolioElement.insertAdjacentHTML("beforeend", htmlElement);
+    });
+}
+
+function renderContacts(dataJson) {
+    document.querySelector("#phone_number p").innerText = dataJson["phone_number"];
+    document.querySelector("#email p").innerText = dataJson["email"];
 }

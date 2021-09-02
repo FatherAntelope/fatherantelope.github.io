@@ -19,9 +19,7 @@
 <!--/Загрузчик страницы-->
 
 <!--Оверлей-->
-<div class="overlay">
-
-</div>
+<div class="overlay"></div>
 <!--/Оверлей-->
 
 
@@ -84,20 +82,11 @@
                     </div>
                 </div>
                 <div class="text-about">
-                    Я начинающий специалист в области web-программирования. К изучению web технологий пришел лично.
-                    Работал в командных проектах, где брал на себя роль руководителя и писал документацию. <br>
-                    ...
-                    <h3>Навыки</h3>
-                    <div class="skills">
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">HTML</div>
-                        <div class="skill-item">CSS</div>
-                        <div class="skill-item">PHP</div>
-                        <div class="skill-item">С#</div>
-                        <div class="skill-item">MySQL</div>
-                        <div class="skill-item">Bootstrap</div>
-                        <div class="skill-item">Git</div>
-                    </div>
+                    <h3>Ключевые навыки</h3>
+                    <div class="skills" id="skills_key"></div>
+
+                    <h3>Знакомые технологии</h3>
+                    <div class="skills" id="skills_additional"></div>
 
                     <!--Табы-->
                     <div class="tabs-about">
@@ -108,13 +97,7 @@
 
                     <!--Контент таба "Образование"-->
                     <div class="tab-content active" id="education">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <span class="date">2017 - 2021</span>
-                                <h4>Программная инженерия - <span>УГАТУ</span></h4>
-                                <p>Диплом бакалавра с отличием</p>
-                            </div>
-                        </div>
+                        <div class="timeline"></div>
                     </div>
                     <!--/Контент таба "Образование"-->
 
@@ -127,7 +110,7 @@
                         </div>
                     </div>
                     <!--/Контент таба "Опыт работы"-->
-                    <a href="" target="_blank" class="btn">Скачать резюме</a>
+                    <a href="/documents/resume.pdf" download="Владлен Горбунов.pdf" id="#link-resume" class="btn">Скачать резюме</a>
                     <a href="#contact" class="btn link-item">Контакты</a>
                 </div>
             </div>
@@ -180,13 +163,13 @@
                     </form>
                 </div>
                 <div class="contact-info">
-                    <div class="contact-info-item">
+                    <div class="contact-info-item" id="email">
                         <h3>Email</h3>
-                        <p>fatherantelope@gmail.com</p>
+                        <p></p>
                     </div>
-                    <div class="contact-info-item">
+                    <div class="contact-info-item" id="phone_number">
                         <h3>Телефон</h3>
-                        <p>+7 (917) 400 56-15</p>
+                        <p></p>
                     </div>
                     <div class="contact-info-item">
                         <h3>Подпишитесь</h3>
@@ -234,8 +217,5 @@
 </div>
 <!--/Модальные окна (Popup)-->
 <script src="js/script.js"></script>
-<script>
-
-</script>
 </body>
 </html>

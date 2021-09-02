@@ -563,7 +563,6 @@ button {
     font-size: 1.3rem;
     margin: 1.3rem 0;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 .text-about .skills {
