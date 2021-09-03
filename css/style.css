@@ -893,6 +893,14 @@ Modal Portfolio Styles
     background-color: var(--orange-color);
 }
 
+.codewars {
+    margin-top: 1rem;
+}
+
+.codewars img {
+    width: 300px;
+}
+
 /*------------------
      Responsive
 --------------------*/
