@@ -3,10 +3,9 @@
   "skills": {
     "key": {
       "0": "JavaScript",
-      "1": "React",
-      "2": "HTML",
-      "3": "CSS",
-      "4": "Git"
+      "1": "HTML",
+      "2": "CSS",
+      "3": "Git"
     },
     "additional": {
       "0": "PHP",
