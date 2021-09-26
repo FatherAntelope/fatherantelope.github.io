@@ -118,8 +118,10 @@ function toggleModal() {
 }
 
 function itemDetailsPortfolio(itemPortfolio) {
-    document.querySelector(".modal-thumbnail img").src =
-        itemPortfolio.querySelector(".card-item-portfolio-thumbnail img").src;
+    document.querySelector(".modal-thumbnail img").setAttribute(
+        "src",
+        itemPortfolio.querySelector(".card-item-portfolio-thumbnail img").getAttribute("src")
+    );
 
     document.querySelector(".modal-header h3").innerHTML =
         itemPortfolio.querySelector(".card-item-portfolio h3").innerHTML;
@@ -152,7 +154,7 @@ function renderSkills(dataJson, elemID) {
     let htmlElement;
     skillsArr.forEach(item => {
         htmlElement = `
-            <div class="skill-item">${item}</div>
+            <div class="skill-item">${item}.</div>
         `;
         skillsItem.insertAdjacentHTML("beforeend", htmlElement);
     });
