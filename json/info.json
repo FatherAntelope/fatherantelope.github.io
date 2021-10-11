@@ -1,29 +1,39 @@
 {
   "description": "Являюсь начинающим специалистом в сфере web разработки. Web технологии изучал самостоятельно и применял их на практике в реализации командных проектов в университете, где брал на себя роль Fullstack разработчика и руководителя проекта.\nНачинал с языка PHP с применением JS на основе полученной базы из университета по языкам C++ и C#.\nРешил продолжить развиваться в стеке Frontend разработчика, углубленно изучая язык JS.\nПрисутствуют организаторские навыки и ответственность.\nИмею дополнительные навыки в проектировании, а также в методологии моделирования (построение архитектурных и структурных схем). Знаком с технологией СУБД.",
   "skills": {
-    "key": {
-      "0": "JavaScript",
-      "1": "HTML",
-      "2": "CSS",
-      "3": "Git"
-    },
-    "additional": {
-      "0": "PHP",
-      "1": "C#",
-      "2": "MySQL",
-      "3": "Bootstrap"
-    }
+    "key": ["JavaScript", "HTML", "CSS", "SCSS", "Git"],
+    "additional": ["PHP", "C#", "MySQL", "Bootstrap"]
   },
-  "education" : {
-    "0": {
+  "education" : [
+    {
       "period": "2017 - 2021",
       "name_place_study": "УГАТУ",
       "direction": "Программная инженерия",
       "document": "Диплом бакалавра о высшем образовании с отличием"
     }
-  },
-  "portfolio": {
-    "0": {
+  ],
+  "training" : [
+    {
+      "period": "2021 сентябрь",
+      "name_place_study": "Нетология",
+      "direction": "Основы верстки сайта",
+      "document": "Сертификат"
+    },
+    {
+      "period": "2021 сентябрь",
+      "name_place_study": "ITEA ONLINE",
+      "direction": "HTML&CSS мастеркласс",
+      "document": "Сертификат"
+    },
+    {
+      "period": "2021 сентябрь - текущее время",
+      "name_place_study": "Innopolis University",
+      "direction": "Промышленная разработка приложений на JavaScript",
+      "document": "Идет обучение..."
+    }
+  ],
+  "portfolio": [
+    {
       "nameProject": "Сатурн. МИС",
       "imgURL": "img/portfolio/1.svg",
       "about": "Данное web-приложение представляет из себя медицинскую информационную систему для пациентов, проходящих процесс реабилитации или отдыха в санатории, для медицинского персонала, контролирующей процесс реабилитации или отдыха пациентов в санатории и для администрации, занимающейся обслуживанием сопровождения процесса реабилитации.\nПроект реализовывался в рамках выпускной квалификационной работы по направлению \"Программная инженерия\".",
@@ -31,9 +41,9 @@
       "role": "Fullstack",
       "technologies": "JS, PHP, CSS, HTML, Bootstrap 4, jQuery&Ajax",
       "repositoryURL": "https://github.com/fatherantelope/saturn-mis",
-      "websiteURL": "https://saturn-mis.ru"
+      "websiteURL": null
     },
-    "1": {
+    {
       "nameProject": "Landing portfolio page",
       "imgURL": "img/portfolio/2.svg",
       "about": "Первая версия лендинга моего портфолио. Отражает набросок моих первоначальных идей для дополнения к резюме.",
@@ -43,7 +53,7 @@
       "repositoryURL": "https://github.com/fatherantelope/fatherantelopev1.github.io",
       "websiteURL": null
     },
-    "2": {
+    {
       "nameProject": "HeartBlaze",
       "imgURL": "img/portfolio/3.svg",
       "about": "Web-приложение для кафедры физической культуры ФГБОУ ВО \"Уфимского Государственного Авиационного Технического Университета\". Направлено на студентов и преподавателей данной кафедры с целью контроля физической активности во время занятий.\nПроект временно использовался мною и другими студентами из моей спортивной секции.",
@@ -51,9 +61,9 @@
       "role": "Fullstack",
       "technologies": "JS, PHP, CSS, HTML, MySQL, Semantic UI, jQuery&Ajax",
       "repositoryURL": "https://github.com/fatherantelope/heartblazev2",
-      "websiteURL": "http://heartblaze.online/"
+      "websiteURL": null
     },
-    "3": {
+    {
       "nameProject": "Прямая и плоскость",
       "imgURL": "img/portfolio/4.svg",
       "about": "Десктопное программное обеспечение, отражающее взаимодействие прямой с плоскостью, а то есть их пересечение. Для расчетов были использованы основы тригонометрии, геометрии и дискретной математики.",
@@ -63,7 +73,7 @@
       "repositoryURL": "https://github.com/fatherantelope/straight-flat-intersection",
       "websiteURL": null
     }
-  },
+  ],
   "contacts": {
     "email": "gorbunov.vladlen2014@gmail.com",
     "phone_number": "+7 (927) 320 89-29"

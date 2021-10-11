@@ -138,7 +138,8 @@ function renderInfo(pathJSON) {
             renderDescription(data["description"]);
             renderSkills(data["skills"]["key"], "skills_key");
             renderSkills(data["skills"]["additional"], "skills_additional");
-            renderEducation(data["education"]);
+            renderTabData(data["education"], "#education");
+            renderTabData(data["training"], "#training");
             renderPortfolioCards(data["portfolio"]);
             renderContacts(data["contacts"]);
         });
@@ -154,15 +155,15 @@ function renderSkills(dataJson, elemID) {
     let htmlElement;
     skillsArr.forEach(item => {
         htmlElement = `
-            <div class="skill-item">${item}.</div>
+            <div class="skill-item">${item}</div>
         `;
         skillsItem.insertAdjacentHTML("beforeend", htmlElement);
     });
 }
 
-function renderEducation(dataJson) {
+function renderTabData(dataJson, id) {
     let educationArr = Object.values(dataJson);
-    let timeline = document.querySelector(".timeline");
+    let timeline = document.querySelector(`${id} .timeline`);
     let htmlElement;
     educationArr.forEach(item => {
         htmlElement = `
@@ -172,7 +173,7 @@ function renderEducation(dataJson) {
             <p>${item["document"]}</p>
         </div>
         `;
-        timeline.insertAdjacentHTML("beforeend", htmlElement);
+        timeline.insertAdjacentHTML("afterbegin", htmlElement);
     });
 }
 
