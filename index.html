@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="//use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
-    <title>Владлен Горбунов</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="//use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+  <title>Владлен Горбунов</title>
 </head>
 <body>
 <!--Загрузчик страницы-->
 <div class="page-loader">
-    <div></div>
-    <div></div>
-    <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 <!--/Загрузчик страницы-->
 
@@ -22,212 +22,214 @@
 <div class="overlay"></div>
 <!--/Оверлей-->
 
-
 <div class="main hidden">
-    <!--Навбар-->
-    <header class="header">
-        <div class="container">
-            <div class="row flex-end">
-                <button type="button" class="nav-toggler">
-                    <span></span>
-                </button>
-                <nav class="nav">
-                    <div class="nav-inner">
-                        <ul>
-                            <li><a href="#home" class="nav-item link-item">Главная</a></li>
-                            <li><a href="#about" class="nav-item link-item">Обо мне</a></li>
-                            <li><a href="#portfolio" class="nav-item link-item">Портфолио</a></li>
-                            <li><a href="#contact" class="nav-item link-item">Контакты</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+  <!--Навбар-->
+  <header class="header">
+    <div class="container">
+      <div class="row flex-end">
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <div class="nav-inner">
+            <ul>
+              <li><a href="#home" class="nav-item link-item">Главная</a></li>
+              <li><a href="#about" class="nav-item link-item">Обо мне</a></li>
+              <li><a href="#portfolio" class="nav-item link-item">Портфолио</a></li>
+              <li><a href="#contact" class="nav-item link-item">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--/Навбар-->
+
+  <!--Домашняя-->
+  <section class="section-home align-items-center" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="text-home">
+          <p>Привет! Меня зовут</p>
+          <h1>Владлен Горбунов</h1>
+          <h2>web-developer</h2>
+          <a href="#about" class="btn link-item">Обо мне</a>
+          <a href="#portfolio" class="btn link-item">Портфолио</a>
         </div>
-    </header>
-    <!--/Навбар-->
-
-    <!--Домашняя-->
-    <section class="section-home align-items-center" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="text-home">
-                    <p>Привет! Меня зовут</p>
-                    <h1>Владлен Горбунов</h1>
-                    <h2>web-developer</h2>
-                    <a href="#about" class="btn link-item">Обо мне</a>
-                    <a href="#portfolio" class="btn link-item">Портфолио</a>
-                </div>
-                <div class="img-home">
-                    <div class="img-box">
-                        <img src="img/img-avatar-mini.png" alt="avatar">
-                    </div>
-                </div>
-            </div>
+        <div class="img-home">
+          <div class="img-box">
+            <img src="img/img-avatar-mini.png" alt="avatar">
+          </div>
         </div>
-    </section>
-    <!--/Домашняя-->
+      </div>
+    </div>
+  </section>
+  <!--/Домашняя-->
 
-    <!--Обо мне-->
-    <section class="section-about p-section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>Обо мне</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="img-about">
-                    <div class="img-box">
-                        <img src="img/img-avatar.png" alt="avatar">
-                    </div>
-                </div>
-                <div class="text-about">
-                    <h3>Ключевые навыки</h3>
-                    <div class="skills" id="skills_key"></div>
-
-                    <h3>Знакомые технологии</h3>
-                    <div class="skills" id="skills_additional"></div>
-
-                    <!--Табы-->
-                    <div class="tabs-about">
-                        <button type="button" class="tab-item active" data-target="#education">Образование</button>
-                        <button type="button" class="tab-item" data-target="#training">
-                            Переподготовка
-                        </button>
-                        <button type="button" class="tab-item" data-target="#experience">Опыт работы</button>
-                    </div>
-                    <!--/Табы-->
-
-                    <!--Контент таба "Образование"-->
-                    <div class="tab-content active" id="education">
-                        <div class="timeline"></div>
-                    </div>
-                    <!--/Контент таба "Образование"-->
-
-                    <!--Контент таба "Образование"-->
-                    <div class="tab-content" id="training">
-                        <div class="timeline"></div>
-                    </div>
-                    <!--/Контент таба "Образование"-->
-
-                    <!--Контент таба "Опыт работы"-->
-                    <div class="tab-content" id="experience">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <h4>*Отсутствует - в последние годы проходил обучение без возможности работать*</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/Контент таба "Опыт работы"-->
-                    <a href="/documents/resume.pdf" download="Владлен Горбунов.pdf" id="#link-resume" class="btn">Скачать резюме</a>
-                    <a href="#contact" class="btn link-item">Контакты</a>
-                </div>
-            </div>
+  <!--Обо мне-->
+  <section class="section-about p-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>Обо мне</h2>
         </div>
-    </section>
-    <!--/Обо мне-->
-
-    <!--Портфолио-->
-    <section class="section-portfolio p-section" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>Портфолио</h2>
-                </div>
-            </div>
-            <div class="row cards-portfolio">
-                <!--Карточки проектов-->
-            </div>
+      </div>
+      <div class="row">
+        <div class="img-about">
+          <div class="img-box">
+            <img src="img/img-avatar.png" alt="avatar">
+          </div>
         </div>
-    </section>
-    <!--/Портфолио-->
+        <div class="text-about">
+          <h3>Ключевые навыки</h3>
+          <div class="skills" id="skills_key"></div>
 
-    <!--Контакты-->
-    <section class="section-contact p-section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>Контакты</h2>
-                </div>
+          <h3>Знакомые технологии</h3>
+          <div class="skills" id="skills_additional"></div>
+
+          <!--Табы-->
+          <div class="tabs-about">
+            <button type="button" class="tab-item active" data-target="#education">Образование</button>
+            <button type="button" class="tab-item" data-target="#training">
+              Переподготовка
+            </button>
+            <button type="button" class="tab-item" data-target="#experience">Опыт работы</button>
+          </div>
+          <!--/Табы-->
+
+          <!--Контент таба "Образование"-->
+          <div class="tab-content active" id="education">
+            <div class="timeline"></div>
+          </div>
+          <!--/Контент таба "Образование"-->
+
+          <!--Контент таба "Образование"-->
+          <div class="tab-content" id="training">
+            <div class="timeline"></div>
+          </div>
+          <!--/Контент таба "Образование"-->
+
+          <!--Контент таба "Опыт работы"-->
+          <div class="tab-content" id="experience">
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>*Отсутствует - в последние годы проходил обучение без возможности работать*</h4>
+              </div>
             </div>
-            <div class="row">
-                <div class="contact-form" >
-                    <h4>Для деловых запросов и сотрудничества, пожалуйста, свяжитесь со мной, заполнив форму ниже.</h4>
-                    <form id="formSendMsgToMail" action="https://formspree.io/f/mwkardvw" method="POST">
-                        <div class="row">
-                            <div class="input-group">
-                                <input type="text" name="name" placeholder="Имя" class="input-control" required>
-                            </div>
-                            <div class="input-group">
-                                <input type="email" name="email" placeholder="Почта" class="input-control" required>
-                            </div>
-                            <div class="input-group">
-                                <textarea name="message" placeholder="Сообщение..." class="input-control" required></textarea>
-                            </div>
-                        </div>
-                        <div class="btn-submit">
-                            <button type="submit" class="btn">Отправить</button>
-                        </div>
-                        <p id="form-status" style="margin-top: 1rem; color: green"></p>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-info-item" id="email">
-                        <h3>Email</h3>
-                        <p></p>
-                    </div>
-                    <div class="contact-info-item" id="phone_number">
-                        <h3>Телефон</h3>
-                        <p></p>
-                    </div>
-                    <div class="contact-info-item">
-                        <h3>Подпишитесь</h3>
-                        <div class="social-links">
-                            <a href="https://vk.com/vladlengorbunov" target="_blank">
-                                <i class="fab fa-vk"></i>
-                            </a>
-                            <a href="https://www.instagram.com/father_antelope/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://github.com/FatherAntelope" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://discord.gg/J87jCAsWWJ" target="_blank">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                            <a href="https://open.spotify.com/user/rmm396f9kxorblgbicudcttgq?si=ff37622f2e3e4f3b" target="_blank">
-                                <i class="fab fa-spotify"></i>
-                            </a>
-                        </div>
-                        <div class="codewars">
-                            <a href="https://www.codewars.com/users/FatherAntelope">
-                                <img src="https://www.codewars.com/users/FatherAntelope/badges/large" alt="codewars">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <!--/Контент таба "Опыт работы"-->
+          <a href="/documents/resume.pdf" download="Владлен_Горбунов_CV.pdf" id="#link-resume" class="btn">Скачать
+            резюме</a>
+          <a href="#contact" class="btn link-item">Контакты</a>
         </div>
-    </section>
-    <!--/Контакты-->
+      </div>
+    </div>
+  </section>
+  <!--/Обо мне-->
+
+  <!--Портфолио-->
+  <section class="section-portfolio p-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>Портфолио</h2>
+        </div>
+      </div>
+      <div class="row cards-portfolio">
+        <!--Карточки проектов-->
+      </div>
+    </div>
+  </section>
+  <!--/Портфолио-->
+
+  <!--Контакты-->
+  <section class="section-contact p-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>Контакты</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="contact-form">
+          <h4>Для деловых запросов и сотрудничества, пожалуйста, свяжитесь со мной, заполнив форму ниже.</h4>
+          <form id="formSendMsgToMail" action="https://formspree.io/f/mwkardvw" method="POST">
+            <div class="row">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Имя" class="input-control" required>
+              </div>
+              <div class="input-group">
+                <input type="email" name="email" placeholder="Почта" class="input-control" required>
+              </div>
+              <div class="input-group">
+                <textarea name="message" placeholder="Сообщение..." class="input-control" required></textarea>
+              </div>
+            </div>
+            <div class="btn-submit">
+              <button type="submit" class="btn">Отправить</button>
+            </div>
+            <p id="form-status" style="margin-top: 1rem; color: green"></p>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-item" id="email">
+            <h3>Email</h3>
+            <p></p>
+          </div>
+          <div class="contact-info-item" id="phone_number">
+            <h3>Телефон</h3>
+            <p></p>
+          </div>
+          <div class="contact-info-item">
+            <h3>Подпишитесь</h3>
+            <div class="social-links">
+              <a href="https://vk.com/vladlengorbunov" target="_blank">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.instagram.com/father_antelope/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://github.com/FatherAntelope" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://discord.gg/J87jCAsWWJ" target="_blank">
+                <i class="fab fa-discord"></i>
+              </a>
+              <a
+                href="https://open.spotify.com/user/rmm396f9kxorblgbicudcttgq?si=ff37622f2e3e4f3b"
+                target="_blank">
+                <i class="fab fa-spotify"></i>
+              </a>
+            </div>
+            <div class="codewars">
+              <a href="https://www.codewars.com/users/FatherAntelope">
+                <img src="https://www.codewars.com/users/FatherAntelope/badges/large" alt="codewars">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/Контакты-->
 </div>
 
 <!--Модальные окна (Popup)-->
 <div class="modal-portfolio">
-    <div class="modal-inner">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn modal-close"><i class="fas fa-times"></i></button>
-                <div class="modal-thumbnail">
-                    <img src="#" alt="scr image project">
-                </div>
-                <h3>Заголовок</h3>
-            </div>
-            <div class="modal-body">
-                Описание
-            </div>
+  <div class="modal-inner">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn modal-close"><i class="fas fa-times"></i></button>
+        <div class="modal-thumbnail">
+          <img src="#" alt="scr image project">
         </div>
+        <h3>Заголовок</h3>
+      </div>
+      <div class="modal-body">
+        Описание
+      </div>
     </div>
+  </div>
 </div>
 <!--/Модальные окна (Popup)-->
 <script src="js/script.js"></script>
