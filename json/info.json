@@ -1,8 +1,8 @@
 {
-  "description": "Web технологии изучал самостоятельно и применял их на практике в реализации двух командных проектов в университете, где брал на себя роль Fullstack разработчика и руководителя проекта.\nНачинал с языка PHP с применением JS на основе полученной базы в университете по C++ и C#.\nПродолжил развиваться в стеке Frontend разработчика на JS, закрепил и получил необходимые навыки на практике курса от Innopolis University. Основные навыки развиты в таких технологиях, как JS, TS, CSS, SCSS, HTML.\nЗнаю клиент-серверное взаимодействие. Имею навыки в разработке приложений на React&Redux. На практике применял такие UI как Bootstrap, Semantic и Ant Design. Знаком с технологией СУБД MySQL, а также с проектированием и методологиями моделирования.",
+  "description": "Web технологии изучал самостоятельно и применял их на практике в реализации двух командных проектов в университете, где брал на себя роль Fullstack разработчика и руководителя проекта.\n\nНачинал с языка PHP с применением JS на основе полученной базы в университете по C++ и C#.\n\nПродолжил развиваться в стеке Frontend разработчика на JS, закрепил и получил необходимые навыки на практике курса от Innopolis University. Основные навыки развиты в таких технологиях, как JS, TS, CSS, SCSS, HTML.\n\nЗнаю клиент-серверное взаимодействие. Имею навыки в разработке приложений на React&Redux. На практике применял такие UI как Bootstrap, Semantic и Ant Design. По тестированию применял Jest. Знаком с технологией СУБД MySQL, а также с проектированием и методологиями моделирования.",
   "skills": {
     "key": ["JavaScript", "TypeScript", "CSS", "SCSS", "HTML", "Git", "БЭМ", "Git-Flow"],
-    "additional": ["React&Redux", "PHP", "Bootstrap", "Semantic UI"]
+    "additional": ["React&Redux", "Jest", "Express", "Bootstrap", "Semantic UI"]
   },
   "education" : [
     {
@@ -22,14 +22,14 @@
     {
       "period": "2021 сентябрь",
       "name_place_study": "ITEA ONLINE",
-      "direction": "HTML&CSS мастеркласс",
+      "direction": "HTML&CSS мастер-класс",
       "document": "Сертификат"
     },
     {
-      "period": "2021 сентябрь - текущее время",
+      "period": "27.09.2021 - 27.12.2021",
       "name_place_study": "Innopolis University",
       "direction": "Промышленная разработка приложений на JavaScript",
-      "document": "Идет обучение..."
+      "document": "Диплом о профессиональной переподготовке"
     }
   ],
   "portfolio": [
@@ -39,7 +39,7 @@
       "about": "Практическое web-приложение по изученным основным технологиям на курсе от Innopolis University",
       "year": 2021,
       "role": "Fullstack",
-      "technologies": "React, Redux, TS, SCSS, БЭМ, Node, Express",
+      "technologies": "React, Redux, TS, SCSS, БЭМ, Node, Express, Jest",
       "repositoryURL": "https://github.com/FatherAntelope/delta-world",
       "websiteURL": null
     },
@@ -86,6 +86,6 @@
   ],
   "contacts": {
     "email": "gorbunov.vladlen2014@gmail.com",
-    "phone_number": "+7 (927) 320 89-29"
+    "phone_number": "–"
   }
 }
