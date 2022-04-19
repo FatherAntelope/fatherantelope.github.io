@@ -137,6 +137,7 @@ function renderInfo(pathJSON) {
       renderSkills(data["skills"]["additional"], "skills_additional");
       renderTabData(data["education"], "#education");
       renderTabData(data["training"], "#training");
+      renderTabData(data["experience"], "#experience");
       renderPortfolioCards(data["portfolio"]);
       renderContacts(data["contacts"]);
     });
@@ -164,8 +165,8 @@ function renderTabData(dataJson, id) {
     htmlElement = `
         <div class="timeline-item">
             <span class="date">${item["period"]}</span>
-            <h4>${item["direction"]} - <span>${item["name_place_study"]}</span></h4>
-            <p>${item["document"]}</p>
+            <h4>${item["direction"]}<span> – ${item["place"]}</span></h4>
+            <p style="text-align: justify">${item["info"]}</p>
         </div>
         `;
     timeline.insertAdjacentHTML("afterbegin", htmlElement);
@@ -185,12 +186,12 @@ function renderPortfolioCards(dataJson) {
           <h3>${item["nameProject"]}</h3>
           <button class="btn btn-view-project">Подробнее</button>
           <div class="card-item-portfolio-details">
-            <div class="description">
-              <p>${item["about"]}</p>
+            <div class="description" >
+              <p style="text-align: justify">${item["about"]}</p>
             </div>
             <div class="general-info">
                <ul>
-                 <li>Год - <span>${item["year"]}</span></li>
+                  <li>Год - <span>${item["year"]}</span></li>
                   <li>Роль - <span>${item["role"]}</span></li>
                   <li>Использованные технологии - <span>${item["technologies"]}</span></li>
                   <li>Репозиторий - 
