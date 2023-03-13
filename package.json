@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FatherAntelope/fatherantelope.github.io.git",
+  "author": "Горбунов Владлен <vladlen.gorbunov@casestudio.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "2.7.0"
+  }
+}

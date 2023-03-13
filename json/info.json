@@ -1,18 +1,39 @@
 {
   "description": "Web технологии изучал самостоятельно и применял их на практике в реализации двух командных проектов в университете, где брал на себя роль Fullstack разработчика и руководителя проекта.<br><br>Начинал с языка PHP с применением JS на основе полученной базы в университете по C++ и C#.<br><br>Продолжил развиваться в стеке Frontend разработчика на JS, закрепил и получил необходимые навыки на практике курса от Innopolis University. Основные навыки развиты в таких технологиях, как JS, TS, React, MobX, CSS, SCSS и HTML.<br><br>Знаю клиент-серверное взаимодействие. Имею навыки в коммерческой разработке приложений на React с применением стейтменеджера MobX. Помимо MobX знаком с Redux по опыту разработки петпроекта. На практике применял такие UI как Bootstrap, Semantic и Ant Design. Для автотестов применял Jest. Знаком с технологией СУБД MySQL, а также с проектированием и методологиями моделирования. Работал по Agile методологии в JIRA.",
   "skills": {
-    "key": ["JavaScript", "TypeScript", "React", "MobX", "CSS", "SCSS", "HTML", "Git", "БЭМ", "Git-Flow"],
-    "additional": ["React Native", "Redux", "Jest", "Express", "Bootstrap", "Semantic UI", "AntD"]
+    "key": [
+      "React",
+      "React Native",
+      "MobX",
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "SCSS",
+      "HTML",
+      "Git",
+      "БЭМ",
+      "Git-Flow"
+    ],
+    "additional": [
+      "Redux",
+      "Jest",
+      "Express",
+      "CI",
+      "Native Base",
+      "Bootstrap",
+      "Semantic UI",
+      "AntD"
+    ]
   },
-  "experience" : [
+  "experience": [
     {
       "period": "01/2021 по текущее время",
       "place": "ООО \"Финансовые информационные системы\"",
       "direction": "Web-разработчик",
-      "info": "1) Личный кабинет B2C и виджет для банка Volkswagen Financial Services. Разработка по методологии Agile.<br/><b>Технологии</b>: React (классовые и функциональные компоненты), MobX, CSS in JS, Git, Antd, Material-UI.<br/>2) Адаптер виджета карт для FIS Platform.<br/><b>Технологии</b>: TypeScript, SCSS, Git.<br/>3) Мобильная разработка ПО \"Шанс\".<br/><b>Технологии</b>: React-Native (функциональные компоненты), TypeScript, MobX, SCSS, Git."
+      "info": "1) Поддержка легаси и разработка модулей для банка Volkswagen Financial Services по методологии Agile.<br/><b>Технологии</b>: React (классовые и функциональные компоненты), MobX, CSSinJS, Git, Antd, Material-UI.<br/>2) Разработка и поддержка виджетов для FIS Platform (Case Studio).<br/><b>Технологии</b>: TypeScript, JavaScript, SCSS, Git.<br/>3) Мобильная разработка.<br/><b>Технологии</b>: React-Native (функциональные компоненты), TypeScript, MobX, Native Base, SCSS, Git."
     }
   ],
-  "education" : [
+  "education": [
     {
       "period": "2017 - 2021",
       "place": "УГАТУ",
@@ -20,7 +41,7 @@
       "info": "Диплом бакалавра о высшем образовании с отличием"
     }
   ],
-  "training" : [
+  "training": [
     {
       "period": "09/2021",
       "place": "Нетология",
@@ -94,6 +115,6 @@
   ],
   "contacts": {
     "email": "gorbunov.vladlen2014@gmail.com",
-    "phone_number": "–"
+    "phone_number": ""
   }
 }
