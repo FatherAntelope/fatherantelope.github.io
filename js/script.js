@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
   document.querySelector('.section-home').classList.add('active');
   document.querySelector('.page-loader').classList.add('fade-out');
 
-  renderInfo('/json/info.json');
+  renderInfo();
 
   setTimeout(() => {
     document.querySelector('.page-loader').style.display = 'none';
@@ -139,20 +139,38 @@ function itemDetailsPortfolio(itemPortfolio) {
   ).innerHTML;
 }
 
-function renderInfo(pathJSON) {
+async function renderInfo() {
   // Загрузка данных проектов в карточки портфолио из JSON
-  fetch(pathJSON)
-    .then(response => response.json())
-    .then(data => {
-      renderDescription(data['description']);
-      renderSkills(data['skills']['key'], 'skills_key');
-      renderSkills(data['skills']['additional'], 'skills_additional');
-      renderTabData(data['education'], '#education');
-      renderTabData(data['training'], '#training');
-      renderTabData(data['experience'], '#experience');
-      renderPortfolioCards(data['portfolio']);
-      renderContacts(data['contacts']);
-    });
+
+  await Promise.all([
+    request('/json/contacts.json').then(renderContacts),
+    request('/json/portfolio.json').then(renderPortfolioCards),
+    request('/json/common.json').then(data =>
+      renderDescription(data.description),
+    ),
+    request('/json/skills.json').then(data => {
+      renderSkills(data.key, 'skills_key');
+      renderSkills(data.additional, 'skills_additional');
+    }),
+    request('/json/experience.json').then(data =>
+      renderTabData(data, 'experience'),
+    ),
+    request('/json/education.json').then(data =>
+      renderTabData(data, 'education'),
+    ),
+    request('/json/training.json').then(data =>
+      renderTabData(data, 'training'),
+    ),
+  ]);
+}
+
+async function request(pathToJSON) {
+  try {
+    const response = await fetch(pathToJSON);
+    return response.json();
+  } catch (e) {
+    throw e;
+  }
 }
 
 function renderDescription(dataJson) {
@@ -161,9 +179,9 @@ function renderDescription(dataJson) {
     .insertAdjacentHTML('afterbegin', dataJson);
 }
 
-function renderSkills(dataJson, elemID) {
+function renderSkills(dataJson, id) {
   let skillsArr = Object.values(dataJson);
-  let skillsItem = document.getElementById(elemID);
+  let skillsItem = document.getElementById(id);
   let htmlElement;
   skillsArr.forEach(item => {
     htmlElement = `<div class="skill-item">${item}</div>`;
@@ -173,10 +191,9 @@ function renderSkills(dataJson, elemID) {
 
 function renderTabData(dataJson, id) {
   const educationArr = Object.values(dataJson);
-  const timeline = document.querySelector(`${id} .timeline`);
-  let htmlElement;
-  educationArr.forEach(item => {
-    htmlElement = `
+  const timeline = document.querySelector(`#${id} .timeline`);
+  for (const item of educationArr) {
+    const htmlElement = `
         <div class="timeline-item">
             <span class="date">${item['period']}</span>
             <h4>${item['direction']}<span> – ${item['place']}</span></h4>
@@ -184,7 +201,7 @@ function renderTabData(dataJson, id) {
         </div>
         `;
     timeline.insertAdjacentHTML('afterbegin', htmlElement);
-  });
+  }
 }
 
 function renderPortfolioCards(dataJson) {

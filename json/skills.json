@@ -1,0 +1,25 @@
+{
+  "key": [
+    "React",
+    "React Native",
+    "Native Base",
+    "TypeScript",
+    "JavaScript",
+    "InversifyJS",
+    "AntD",
+    "MobX",
+    "CSS",
+    "SCSS",
+    "HTML",
+    "Git",
+    "БЭМ"
+  ],
+  "additional": [
+    "Redux",
+    "Jest",
+    "Express",
+    "Semantic UI",
+    "Gitlab CI",
+    "Bootstrap"
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "period": "01/2021 по текущее время",
+    "place": "ООО \"Финансовые информационные системы\"",
+    "direction": "Web-разработчик",
+    "info": "1) Поддержка легаси, сопровождение и разработка модулей для Web-приложений.<br/><b>Технологии</b>: React (классовые и функциональные компоненты), MobX, CSSinJS, Antd, Material-UI.<br/>2) Разработка и поддержка виджетов для FIS Platform (Case Studio).<br/><b>Технологии</b>: TypeScript, JavaScript, SCSS, Gitlab CI.<br/>3) Мобильная разработка на React Native.<br/><b>Технологии</b>: React Native (функциональные компоненты), TypeScript, MobX, Native Base, InversifyJS."
+  }
+]
