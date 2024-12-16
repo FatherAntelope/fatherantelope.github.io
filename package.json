@@ -1,0 +1,29 @@
+{
+  "name": "fatherantelope",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "FatherAntelope <gorbunov.vladlen2014@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuld": "rm -rf dist"
+  },
+  "dependencies": {
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "eslint": "^9.17.0",
+    "glob": "^11.0.0",
+    "prettier": "^3.4.2",
+    "react-router-dom": "^7.0.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
