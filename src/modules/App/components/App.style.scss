@@ -1,0 +1,10 @@
+.app {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+
+  &_fade-out {
+    opacity: 0.4;
+  }
+}

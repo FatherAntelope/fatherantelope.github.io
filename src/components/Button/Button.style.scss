@@ -1,0 +1,44 @@
+@use '~/assets/styles/colors.scss' as colors;
+
+button {
+  font-family: inherit;
+  user-select: none;
+}
+
+.btn {
+  line-height: 1.5;
+  background-color: colors.$white-25-color;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 20px;
+  border: 1px solid colors.$white-40-color;
+  color: colors.$orange-color;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: colors.$white-color;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: colors.$orange-color;
+    z-index: -1;
+    transition: width 0.3s ease;
+  }
+}

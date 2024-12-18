@@ -11,18 +11,26 @@
     "prebuld": "rm -rf dist"
   },
   "dependencies": {
+    "@types/inversify": "^2.0.33",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
+    "inversify": "^6.2.0",
+    "inversify-react": "^1.1.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/react": "^19.0.1",
     "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
     "glob": "^11.0.0",
     "prettier": "^3.4.2",
     "react-router-dom": "^7.0.2",
+    "sass": "^1.83.0",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
     "vite": "^6.0.3",
     "vite-tsconfig-paths": "^5.1.4"
   }

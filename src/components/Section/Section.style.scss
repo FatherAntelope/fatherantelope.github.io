@@ -1,0 +1,19 @@
+@use '~/assets/styles/colors.scss' as colors;
+
+section {
+  background-color: colors.$white-25-color;
+  border: 1px solid colors.$white-40-color;
+  min-height: 90vh;
+  border-radius: 20px;
+  backdrop-filter: colors.$filter-blur;
+  //display: none;
+
+  &_active {
+    //display: block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  &_fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+}

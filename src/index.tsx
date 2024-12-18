@@ -1,10 +1,16 @@
 import {Container, createRoot} from 'react-dom/client';
-import {App} from '~/modules';
 import React from 'react';
+import {RouterProvider} from 'react-router-dom';
+import {router} from '~/router';
+import {App} from '~/modules';
+
+import '~/assets/styles/global.scss';
 
 const root = createRoot(document.getElementById('root') as Container);
 root.render(
   <React.StrictMode>
-    <App />
+    <App>
+      <RouterProvider router={router}></RouterProvider>
+    </App>
   </React.StrictMode>,
 );
