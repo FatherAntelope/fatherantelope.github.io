@@ -1,104 +1,102 @@
 {
-  "data": {
-    "description": "Являюсь специалистом в веб-разработке с опытом работы 3 года в окружении JS. Больше развит во фронтенд-разработке.<br/>Основные навыки имею в таких технологиях, как TypeScript, React, React Native, MobX, InversifyJS, CSS, SCSS и HTML.<br/>Знаю клиент-серверное взаимодействие. Помимо MobX знаком с Redux по опыту разработки петпроекта. На практике также применял такие UI как Bootstrap, Semantic и Ant Design, а также писал сборщики для Gitlab CI. Для unit-тестов использовал Jest. Знаком с технологией СУБД MySQL, а также с проектированием и методологиями моделирования. Готов развиваться в других технологиях JS и DevOps.",
-    "skills": [
-      {
-        "id": "1",
-        "name": "React",
-        "type": "main"
-      },
-      {
-        "id": "2",
-        "name": "React Native",
-        "type": "main"
-      },
-      {
-        "id": "3",
-        "name": "Native Base",
-        "type": "main"
-      },
-      {
-        "id": "4",
-        "name": "TypeScript",
-        "type": "main"
-      },
-      {
-        "id": "5",
-        "name": "JavaScript",
-        "type": "main"
-      },
-      {
-        "id": "6",
-        "name": "InversifyJS",
-        "type": "main"
-      },
-      {
-        "id": "7",
-        "name": "AntD",
-        "type": "main"
-      },
-      {
-        "id": "8",
-        "name": "MobX",
-        "type": "main"
-      },
-      {
-        "id": "9",
-        "name": "CSS",
-        "type": "main"
-      },
-      {
-        "id": "10",
-        "name": "SCSS",
-        "type": "main"
-      },
-      {
-        "id": "11",
-        "name": "HTML",
-        "type": "main"
-      },
-      {
-        "id": "12",
-        "name": "Git",
-        "type": "main"
-      },
-      {
-        "id": "13",
-        "name": "БЭМ",
-        "type": "main"
-      },
-      {
-        "id": "14",
-        "name": "Redux",
-        "type": "additional"
-      },
-      {
-        "id": "15",
-        "name": "Jest",
-        "type": "additional"
-      },
-      {
-        "id": "16",
-        "name": "Express",
-        "type": "additional"
-      },
-      {
-        "id": "17",
-        "name": "Semantic UI",
-        "type": "additional"
-      },
-      {
-        "id": "18",
-        "name": "Gitlab CI",
-        "type": "additional"
-      },
-      {
-        "id": "19",
-        "name": "Bootstrap",
-        "type": "additional"
-      }
-    ]
-  },
+  "description": "Являюсь специалистом в веб-разработке с опытом работы 3 года в окружении JS. Больше развит во фронтенд-разработке.<br/>Основные навыки имею в таких технологиях, как TypeScript, React, React Native, MobX, InversifyJS, CSS, SCSS и HTML.<br/>Знаю клиент-серверное взаимодействие. Помимо MobX знаком с Redux по опыту разработки петпроекта. На практике также применял такие UI как Bootstrap, Semantic и Ant Design, а также писал сборщики для Gitlab CI. Для unit-тестов использовал Jest. Знаком с технологией СУБД MySQL, а также с проектированием и методологиями моделирования. Готов развиваться в других технологиях JS и DevOps.",
+  "skills": [
+    {
+      "id": "1",
+      "name": "React",
+      "type": "main"
+    },
+    {
+      "id": "2",
+      "name": "React Native",
+      "type": "main"
+    },
+    {
+      "id": "3",
+      "name": "Native Base",
+      "type": "main"
+    },
+    {
+      "id": "4",
+      "name": "TypeScript",
+      "type": "main"
+    },
+    {
+      "id": "5",
+      "name": "JavaScript",
+      "type": "main"
+    },
+    {
+      "id": "6",
+      "name": "InversifyJS",
+      "type": "main"
+    },
+    {
+      "id": "7",
+      "name": "AntD",
+      "type": "main"
+    },
+    {
+      "id": "8",
+      "name": "MobX",
+      "type": "main"
+    },
+    {
+      "id": "9",
+      "name": "CSS",
+      "type": "main"
+    },
+    {
+      "id": "10",
+      "name": "SCSS",
+      "type": "main"
+    },
+    {
+      "id": "11",
+      "name": "HTML",
+      "type": "main"
+    },
+    {
+      "id": "12",
+      "name": "Git",
+      "type": "main"
+    },
+    {
+      "id": "13",
+      "name": "БЭМ",
+      "type": "main"
+    },
+    {
+      "id": "14",
+      "name": "Redux",
+      "type": "additional"
+    },
+    {
+      "id": "15",
+      "name": "Jest",
+      "type": "additional"
+    },
+    {
+      "id": "16",
+      "name": "Express",
+      "type": "additional"
+    },
+    {
+      "id": "17",
+      "name": "Semantic UI",
+      "type": "additional"
+    },
+    {
+      "id": "18",
+      "name": "Gitlab CI",
+      "type": "additional"
+    },
+    {
+      "id": "19",
+      "name": "Bootstrap",
+      "type": "additional"
+    }
+  ],
   "experiences": [
     {
       "id": "1",
