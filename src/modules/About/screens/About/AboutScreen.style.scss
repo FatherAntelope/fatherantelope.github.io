@@ -1,0 +1,39 @@
+@use '~/assets/styles/colors' as colors;
+
+@mixin container {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.section__home {
+  padding: 120px 0;
+  display: flex;
+}
+
+.text__about {
+  @include container;
+
+  & h1, h2 {
+    text-transform: capitalize;
+  }
+
+  & h3 {
+    font-size: 1.3rem;
+    margin: 1.3rem 0;
+    font-weight: 600;
+  }
+}
+
+.img__about {
+  width: 40%;
+
+  & .img__box {
+    max-width: 380px;
+    border-radius: 10px;
+
+    & img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

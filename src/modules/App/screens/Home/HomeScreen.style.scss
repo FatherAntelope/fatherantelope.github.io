@@ -40,11 +40,8 @@
 
   & .img__box {
     position: relative;
-    margin: auto;
     max-width: 360px;
     border-radius: 50%;
-    background-color: colors.$white-25-color;
-    border: 0.5rem solid colors.$white-25-color;
 
     &::after {
       content: "";

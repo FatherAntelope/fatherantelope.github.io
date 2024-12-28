@@ -1,4 +1,13 @@
+@use '~/assets/styles/colors' as colors;
+
 img {
   max-width: 100%;
   vertical-align: middle;
+}
+
+
+.img__box {
+  background-color: colors.$white-25-color;
+  border: 0.5rem solid colors.$white-25-color;
+  margin: auto;
 }
